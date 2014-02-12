@@ -3,6 +3,11 @@
 
     <string name="app_name">Anty</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
-
+    <string name="hello_world">This is Anty!</string>
+    <string name="anty_image_description">Anty image description</string>
+    <string name="title_activity_details">DetailsActivity</string>
+    <string name="click_me_button">Click Me!</string>
+    <string name="details_paragraph1">There are two ways to build your application using the Ant build script: one for testing/debugging your application — debug mode — and one for building your final package for release — release mode. Regardless of which way you build your application, it must be signed before it can install on an emulator or device—with a debug key when building in debug mode and with your own private key when building in release mode.</string>
+    <string name="details_paragraph2">Whether you\'re building in debug mode or release mode, you need to use the Ant tool to compile and build your project. This will create the .apk file that you can install on an emulator or device. When you build in debug mode, the .apk file is automatically signed by the SDK tools with a debug key, so it\'s instantly ready for installation onto an emulator or attached development device. You cannot distribute an application that is signed with a debug key. When you build in release mode, the .apk file is unsigned, so you must manually sign it with your own private key, using Keytool and Jarsigner.</string>
+    <string name="details_paragraph3">It\'s important that you read and understand Signing Your Applications, particularly once you\'re ready to release your application and share it with end-users. That document describes the procedure for generating a private key and then using it to sign your .apk file. If you\'re just getting started, however, you can quickly run your applications on an emulator or your own development device by building in debug mode.</string>
 </resources>
