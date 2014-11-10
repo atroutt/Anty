@@ -1,21 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>Anty</name>
-	<comment/>
+	<comment></comment>
 	<projects>
 	</projects>
 	<buildSpec>
-<buildCommand>
-<name>org.eclipse.ui.externaltools.ExternalToolBuilder</name>
-<id>artisanAspectGenerator</id>
-<triggers>full,incremental,</triggers>
-<arguments>
-<dictionary>
-<key>LaunchConfigHandle</key>
-<value>&lt;project&gt;/.externalToolBuilders/Artisan Aspect Generator.launch</value>
-</dictionary>
-</arguments>
-</buildCommand>
 		<buildCommand>
 			<name>com.android.ide.eclipse.adt.ResourceManagerBuilder</name>
 			<arguments>
@@ -26,20 +15,19 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
-		
 		<buildCommand>
-<name>org.eclipse.ajdt.core.ajbuilder</name>
-<arguments/>
-</buildCommand>
-<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
 			<name>com.android.ide.eclipse.adt.ApkBuilder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
 	</buildSpec>
 	<natures>
-		<nature>org.eclipse.ajdt.ui.ajnature</nature>
-<nature>com.android.ide.eclipse.adt.AndroidNature</nature>
+		<nature>com.android.ide.eclipse.adt.AndroidNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
 </projectDescription>
