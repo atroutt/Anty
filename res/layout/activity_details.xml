@@ -17,17 +17,18 @@
             android:padding="5dp"
             android:text="@string/details_paragraph1" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:text="@string/details_paragraph2" />
+            android:onClick="button1Tap"
+            android:text="Button 1" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:text="@string/details_paragraph3" />
+            android:text="Button 2" />
     </LinearLayout>
 
 </ScrollView>

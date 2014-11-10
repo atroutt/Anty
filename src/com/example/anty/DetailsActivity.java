@@ -2,32 +2,50 @@ package com.example.anty;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.support.v4.app.NavUtils;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
-public class DetailsActivity extends Activity {
+public class DetailsActivity extends Activity implements View.OnClickListener {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_details);
-		// Show the Up button in the action bar.
 		setupActionBar();
+
+		Button button2 = (Button) findViewById(R.id.button2);
+		button2.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Log.d("tapTest", "button 2 was tapped");
+			}
+		});
+
+		// Button 3 is created in code
+		LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linear);
+		Button button3 = new Button(this);
+		button3.setText("Button 3");
+		button3.setOnClickListener(new ButtonThreeListener());
+		linearLayout.addView(button3);
+
+		// Button 4 is created in code
+		Button button4 = new Button(this);
+		button4.setText("Button 4");
+		button4.setOnClickListener(this);
+		linearLayout.addView(button4);
 	}
 
-	/**
-	 * Set up the {@link android.app.ActionBar}.
-	 */
 	private void setupActionBar() {
-
 		getActionBar().setDisplayHomeAsUpEnabled(true);
-
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.details, menu);
 		return true;
 	}
@@ -36,17 +54,27 @@ public class DetailsActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			// This ID represents the Home or Up button. In the case of this
-			// activity, the Up button is shown. Use NavUtils to allow users
-			// to navigate up one level in the application structure. For
-			// more details, see the Navigation pattern on Android Design:
-			//
-			// http://developer.android.com/design/patterns/navigation.html#up-vs-back
-			//
 			NavUtils.navigateUpFromSameTask(this);
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
 	}
 
+	public void button1Tap(View v) {
+		Log.d("tapTest", "button 1 was tapped");
+	}
+
+	@Override
+	public void onClick(View v) {
+		Log.d("tapTest", "button 4 was tapped");
+	}
+
+	// Example of inner class button listener
+	private class ButtonThreeListener implements View.OnClickListener {
+
+		@Override
+		public void onClick(View v) {
+			Log.d("tapTest", "button 3 was tapped");
+		}
+	}
 }
